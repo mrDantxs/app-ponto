@@ -1,13 +1,16 @@
 {
   "expo": {
-    "name": "app-ponto",
+    "name": "Ponto Eletrônico Mobile",
     "slug": "app-ponto",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Precisamos da sua localização para validar o registro de ponto eletrônico."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -16,6 +19,10 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ],
       "predictiveBackGestureEnabled": false
     },
     "web": {
